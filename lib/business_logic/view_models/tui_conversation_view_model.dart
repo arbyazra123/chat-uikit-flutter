@@ -44,6 +44,7 @@ class TUIConversationViewModel extends ChangeNotifier {
   static V2TimConversation? _selectedConversation;
   Map<String, String> webDraftMap = {};
 
+  bool _isInitLoading = false;
   bool _haveMoreData = true;
   int _totalUnReadCount = 0;
   String? _scrollToConversation;
@@ -54,23 +55,28 @@ class TUIConversationViewModel extends ChangeNotifier {
   ConversationLifeCycle? _lifeCycle;
 
   List<V2TimConversation?> get conversationList {
-    if (PlatformUtils().isWeb) {
-      try {
-        _conversationList.sort((a, b) {
-          return b!.lastMessage!.timestamp!
-              .compareTo(a!.lastMessage!.timestamp!);
-        });
+    // if (PlatformUtils().isWeb) {
+    // try {
 
-        final pinnedConversation = _conversationList
-            .where((element) => element?.isPinned == true)
-            .toList();
-        _conversationList.removeWhere((element) => element?.isPinned == true);
-        _conversationList = [...pinnedConversation, ..._conversationList];
-        // ignore: empty_catches
-      } catch (e) {}
-    } else {
-      _conversationList.sort((a, b) => b!.orderkey!.compareTo(a!.orderkey!));
-    }
+    _conversationList.sort(
+      (a, b) {
+        var bTimestamp = (b!.lastMessage?.timestamp ?? 0);
+        var aTimestamp = a?.lastMessage?.timestamp ?? 0;
+        return bTimestamp.compareTo(aTimestamp);
+      },
+    );
+
+    final pinnedConversation = _conversationList
+        .where((element) => element?.isPinned == true)
+        .toList();
+    _conversationList.removeWhere((element) => element?.isPinned == true);
+    _conversationList = [...pinnedConversation, ..._conversationList];
+    // notifyListeners();
+    // ignore: empty_catches
+    // } catch (e) {}
+    // } else {
+    //   _conversationList.sort((a, b) => b!.orderkey!.compareTo(a!.orderkey!));
+    // }
     return _conversationList;
   }
 
@@ -135,10 +141,14 @@ class TUIConversationViewModel extends ChangeNotifier {
   }
 
   loadInitConversation() async {
+    _isInitLoading = true;
+    notifyListeners();
     await loadData(count: 40);
     if (selfInfoViewModel.globalConfig?.isPreloadMessagesAfterInit ?? true) {
-      _chatGlobalModel.initMessageMapFromLocalDatabase(_conversationList);
+      await _chatGlobalModel.initMessageMapFromLocalDatabase(_conversationList);
     }
+    _isInitLoading = false;
+    notifyListeners();
   }
 
   initConversation() async {
@@ -315,3 +325,4 @@ class TUIConversationViewModel extends ChangeNotifier {
     loadData(count: count);
   }
 }
+
