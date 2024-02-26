@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@tencentcloud/chat": "^3.2.3"
+  }
+}

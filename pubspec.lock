@@ -1300,18 +1300,18 @@ packages:
     dependency: transitive
     description:
       name: tencent_cloud_chat_sdk
-      sha256: "7dbb354209eca61f2c816c8ba7c1b1282dd5fb7e090135186bde56c89d976110"
+      sha256: "39a19d993575ed2e682d85945f88cdb8f6a3cd123989138fea7b905cfd87160b"
       url: "https://pub.dev"
     source: hosted
-    version: "6.0.2"
+    version: "6.1.33"
   tencent_cloud_uikit_core:
     dependency: "direct main"
     description:
       name: tencent_cloud_uikit_core
-      sha256: "5624654c52a230111cbcfcaa648b9c6e3ee877018f16bc5eec076b639655a191"
+      sha256: ddd9447412835ccb2d739363fd1d73bf7f4488b2b76e8217219d25eb90b088f6
       url: "https://pub.dev"
     source: hosted
-    version: "1.2.1"
+    version: "1.5.1"
   tencent_im_base:
     dependency: "direct main"
     description:
@@ -1324,10 +1324,10 @@ packages:
     dependency: transitive
     description:
       name: tencent_im_sdk_plugin_platform_interface
-      sha256: "3b39f19fcc2306c7cbdabe79e532bbb7feade695630f5373308a52703ece482c"
+      sha256: e6120d09fbc0dedc0f5a4143809598ae56f2ab56176b4d2646414a59d6b64371
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.16"
   tencent_keyboard_visibility:
     dependency: "direct main"
     description:

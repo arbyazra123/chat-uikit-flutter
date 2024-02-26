@@ -4,6 +4,7 @@ version: 2.4.1
 homepage: https://trtc.io/products/chat?utm_source=gfs&utm_medium=link&utm_campaign=%E6%B8%A0%E9%81%93&_channel_track_key=k6WgfCKn
 repository: https://github.com/TencentCloud/chat-uikit-flutter
 documentation: https://comm.qq.com/im/doc/flutter/en/TUIKit/readme.html
+publish_to: 'none'
 
 # publish_to: none
 platforms:
@@ -66,7 +67,8 @@ dependencies:
   tencent_im_base: ^3.1.0
   fc_native_video_thumbnail: any
   path: ^1.8.1
-  tencent_cloud_uikit_core: ^1.2.1
+  tencent_cloud_uikit_core:
+    path: plugins/tencent_cloud_uikit_core-1.5.1
   pasteboard: ^0.2.0
   desktop_drop: ^0.4.4
   device_info_plus: any
