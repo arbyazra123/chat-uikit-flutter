@@ -32,12 +32,6 @@
       "languageVersion": "2.18"
     },
     {
-      "name": "audio_session",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/audio_session-0.1.16",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
       "name": "azlistview_all_platforms",
       "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/azlistview_all_platforms-2.1.2",
       "packageUri": "lib/",
@@ -561,21 +555,9 @@
     },
     {
       "name": "just_audio",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/just_audio-0.9.34",
+      "rootUri": "file:///Users/def/.pub-cache/git/custom_just_audio-66ccdd846d20ea5ada81271cae7361d102228c44/",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
-      "name": "just_audio_platform_interface",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/just_audio_platform_interface-4.2.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
-      "name": "just_audio_web",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/just_audio_web-0.4.8",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.0"
     },
     {
       "name": "link_preview_generator_for_us",
@@ -1256,7 +1238,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-02-26T02:47:14.571596Z",
+  "generated": "2024-03-08T07:45:35.214794Z",
   "generator": "pub",
   "generatorVersion": "3.2.2"
 }

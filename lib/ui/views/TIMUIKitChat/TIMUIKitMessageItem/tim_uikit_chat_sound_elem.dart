@@ -110,8 +110,8 @@ class _TIMUIKitSoundElemState extends TIMUIKitState<TIMUIKitSoundElem> {
   void initState() {
     super.initState();
 
-    subscription = SoundPlayer.playStateListener(listener: (PlayerState state) {
-      if (state.processingState == ProcessingState.completed) {
+    subscription = SoundPlayer.playStateListener(listener: (AudioPlaybackState state) {
+      if (state == AudioPlaybackState.completed) {
         widget.chatModel.currentPlayedMsgId = "";
       }
     });
