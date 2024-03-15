@@ -656,8 +656,8 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "open_file",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/open_file-3.3.2",
+      "name": "open_filex",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/open_filex-4.4.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -1256,7 +1256,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-02-26T02:47:14.571596Z",
+  "generated": "2024-03-15T10:41:43.799998Z",
   "generator": "pub",
   "generatorVersion": "3.2.2"
 }
