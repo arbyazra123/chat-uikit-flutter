@@ -6,7 +6,7 @@ import 'dart:math';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:open_file/open_file.dart';
+import 'package:open_filex/open_filex.dart';
 import 'package:tencent_cloud_chat_uikit/tencent_cloud_chat_uikit.dart';
 import 'package:tencent_cloud_chat_uikit/ui/utils/permission.dart';
 import 'package:tencent_cloud_chat_uikit/base_widgets/tim_ui_kit_base.dart';
@@ -237,11 +237,11 @@ class _TIMUIKitFileElemState extends TIMUIKitState<TIMUIKitFileElem> {
       if (PlatformUtils().isDesktop && !PlatformUtils().isWindows) {
         launchUrl(Uri.file(filePath));
       } else {
-        OpenFile.open(filePath);
+        OpenFilex.open(filePath);
       }
       // ignore: empty_catches
     } catch (e) {
-      OpenFile.open(filePath);
+      OpenFilex.open(filePath);
     }
   }
 

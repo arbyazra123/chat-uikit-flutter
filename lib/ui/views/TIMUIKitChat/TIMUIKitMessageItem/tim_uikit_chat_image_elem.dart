@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:http/http.dart' as http;
-import 'package:open_file/open_file.dart';
+import 'package:open_filex/open_filex.dart';
 import 'package:tencent_cloud_chat_uikit/business_logic/separate_models/tui_chat_separate_view_model.dart';
 import 'package:tencent_cloud_chat_uikit/data_services/message/message_services.dart';
 import 'package:tencent_cloud_chat_uikit/ui/utils/screen_utils.dart';
@@ -299,7 +299,7 @@ class _TIMUIKitImageElem extends TIMUIKitState<TIMUIKitImageElem> {
 
   void launchDesktopFile(String path) {
     if (PlatformUtils().isWindows) {
-      OpenFile.open(path);
+      OpenFilex.open(path);
     } else {
       launchUrl(Uri.file(path));
     }

@@ -6,7 +6,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_clipboard/image_clipboard.dart';
-import 'package:open_file/open_file.dart';
+import 'package:open_filex/open_filex.dart';
 import 'package:provider/provider.dart';
 import 'package:tencent_cloud_chat_uikit/business_logic/view_models/tui_self_info_view_model.dart';
 import 'package:tencent_cloud_chat_uikit/data_services/services_locatar.dart';
@@ -404,7 +404,7 @@ class TIMUIKitMessageTooltipState
       if (PlatformUtils().isDesktop && !PlatformUtils().isWindows) {
         launchUrl(Uri.file(path));
       } else {
-        OpenFile.open(path);
+        OpenFilex.open(path);
       }
       // ignore: empty_catches
     } catch (e) {}
