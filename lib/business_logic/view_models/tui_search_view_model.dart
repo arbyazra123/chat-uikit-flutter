@@ -38,7 +38,9 @@ class TUISearchViewModel extends ChangeNotifier {
 
   Future<List<V2TimConversation?>?> initConversationMsg() async {
     final conversationResult = await _conversationService.getConversationList(
-        nextSeq: "0", count: 500);
+      nextSeq: "0",
+      count: 500,
+    );
     final conversationListData = conversationResult?.conversationList;
     conversationList = conversationListData ?? [];
     notifyListeners();
@@ -67,8 +69,7 @@ class TUISearchViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  void getMsgForConversation(
-      String keyword, String conversationId, int page) async {
+  void getMsgForConversation(String keyword, int page) async {
     void clearData() {
       currentMsgListForConversation = [];
       totalMsgInConversationCount = 0;
@@ -85,21 +86,26 @@ class TUISearchViewModel extends ChangeNotifier {
         searchParam: V2TimMessageSearchParam(
       keywordList: [keyword],
       pageIndex: page,
-      pageSize: 30,
+      pageSize: 1000,
       searchTimePeriod: 0,
       searchTimePosition: 0,
-      conversationID: conversationId,
+      // conversationID: conversationId,
       type: KeywordListMatchType.V2TIM_KEYWORD_LIST_MATCH_TYPE_OR.index,
     ));
     if (searchResult.code == 0 && searchResult.data != null) {
-      final messageSearchResultItems = searchResult
-          .data!.messageSearchResultItems!
-          .firstWhereOrNull((element) => element.conversationID == conversationId);
-      totalMsgInConversationCount = messageSearchResultItems?.messageCount ?? 0;
+      final messageSearchResultItems =
+          searchResult.data!.messageSearchResultItems!;
+      totalMsgInConversationCount = messageSearchResultItems.fold(
+          0,
+          (previousValue, element) =>
+              (element.messageList?.length ?? 0) + previousValue);
+
       currentMsgListForConversation = [
         ...currentMsgListForConversation,
-        ...(messageSearchResultItems?.messageList ?? [])
       ];
+      for (var element in messageSearchResultItems) {
+        currentMsgListForConversation.addAll(element.messageList ?? []);
+      }
     }
     notifyListeners();
   }
