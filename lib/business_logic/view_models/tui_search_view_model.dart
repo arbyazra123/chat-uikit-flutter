@@ -57,7 +57,13 @@ class TUISearchViewModel extends ChangeNotifier {
 
   void searchFriendByKey(String searchKey) async {
     final searchResult = await _friendshipServices.searchFriends(
-        searchParam: V2TimFriendSearchParam(keywordList: [searchKey]));
+      searchParam: V2TimFriendSearchParam(
+        keywordList: [searchKey],
+        isSearchNickName: true,
+        isSearchRemark: true,
+        isSearchUserID: true,
+      ),
+    );
     friendList = searchResult;
     notifyListeners();
   }
@@ -116,16 +122,21 @@ class TUISearchViewModel extends ChangeNotifier {
       msgList = [];
       totalMsgCount = 0;
     }
-    final searchResult = await _messageService.searchLocalMessages(
-        searchParam: V2TimMessageSearchParam(
-      keywordList: [searchKey],
-      pageIndex: msgPage,
-      pageSize: 5,
-      searchTimePeriod: 0,
-      searchTimePosition: 0,
-      type: KeywordListMatchType.V2TIM_KEYWORD_LIST_MATCH_TYPE_OR.index,
-    ));
+    final searchResult = await TencentImSDKPlugin.v2TIMManager
+        .getMessageManager()
+        .searchLocalMessages(
+            searchParam: V2TimMessageSearchParam(
+          keywordList: [searchKey],
+          pageIndex: msgPage,
+
+          pageSize: 1000,
+          // searchTimePeriod: 0,
+          // searchTimePosition: 0,
+          type: KeywordListMatchType.V2TIM_KEYWORD_LIST_MATCH_TYPE_OR.index,
+        ));
     if (searchResult.code == 0 && searchResult.data != null) {
+      debugPrint(
+          "searchResult ${searchResult.data?.messageSearchResultItems?.length}");
       msgPage++;
       msgList = [...?msgList, ...?searchResult.data!.messageSearchResultItems];
       totalMsgCount = searchResult.data!.totalCount ?? 0;

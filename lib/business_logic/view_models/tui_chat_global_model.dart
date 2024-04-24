@@ -219,7 +219,7 @@ class TUIChatGlobalModel extends ChangeNotifier implements TIMUIKitClass {
         (_messageListMap[currentSelectedConv] ?? []).sublist(
             max(0, ((_messageListMap[currentSelectedConv] ?? []).length - 20)));
     _currentConversationList.removeLast();
-    // notifyListeners();
+    notifyListeners();
   }
 
   V2TimMessageReceipt? getMessageReadReceipt(String msgID) {
@@ -310,10 +310,11 @@ class TUIChatGlobalModel extends ChangeNotifier implements TIMUIKitClass {
     required String conversationID,
   }) async {
     final response = await _messageService.getHistoryMessageList(
-        count: 10,
-        getType: HistoryMsgGetTypeEnum.V2TIM_GET_LOCAL_OLDER_MSG,
-        userID: conversationType == ConvType.c2c ? conversationID : null,
-        groupID: conversationType == ConvType.group ? conversationID : null);
+      count: 10,
+      getType: HistoryMsgGetTypeEnum.V2TIM_GET_LOCAL_OLDER_MSG,
+      userID: conversationType == ConvType.c2c ? conversationID : null,
+      groupID: conversationType == ConvType.group ? conversationID : null,
+    );
     if (_messageListMap[conversationID] == null ||
         _messageListMap[conversationID]!.isEmpty) {
       _messageListMap[conversationID] = response;
