@@ -93,8 +93,8 @@ class TUISearchViewModel extends ChangeNotifier {
       keywordList: [keyword],
       pageIndex: page,
       pageSize: 1000,
-      searchTimePeriod: 0,
-      searchTimePosition: 0,
+      // searchTimePeriod: 0,
+      // searchTimePosition: 0,
       // conversationID: conversationId,
       type: KeywordListMatchType.V2TIM_KEYWORD_LIST_MATCH_TYPE_OR.index,
     ));
