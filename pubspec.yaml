@@ -31,7 +31,7 @@ dependencies:
   tencent_super_tooltip: ^0.0.1
   video_player: ^2.7.0
   chewie_for_us: ^1.5.0
-  flutter_slidable_for_tencent_im: ^1.4.0
+  flutter_slidable: 
   flutter_plugin_record_plus: ^0.0.16
   azlistview_all_platforms: ^2.1.2
   lpinyin: ^2.0.3

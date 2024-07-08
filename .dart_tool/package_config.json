@@ -225,7 +225,7 @@
     },
     {
       "name": "dart_internal",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/dart_internal-0.2.9",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/dart_internal-0.2.12",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -404,10 +404,10 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "flutter_slidable_for_tencent_im",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/flutter_slidable_for_tencent_im-1.4.0",
+      "name": "flutter_slidable",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/flutter_slidable-3.1.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "flutter_svg",
@@ -627,13 +627,13 @@
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/material_color_utilities-0.5.0",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/material_color_utilities-0.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/meta-1.10.0",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/meta-1.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -1256,7 +1256,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-04-26T04:10:19.228201Z",
+  "generated": "2024-07-08T04:35:06.285736Z",
   "generator": "pub",
-  "generatorVersion": "3.2.2"
+  "generatorVersion": "3.3.0"
 }
