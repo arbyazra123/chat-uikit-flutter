@@ -67,8 +67,10 @@ class _TIMUIKitSoundElemState extends TIMUIKitState<TIMUIKitSoundElem> {
     if (!SoundPlayer.isInit) {
       SoundPlayer.initSoundPlayer();
     }
-    if (widget.localCustomInt == null || widget.localCustomInt != HistoryMessageDartConstant.read) {
-      globalModel.setLocalCustomInt(widget.msgID, HistoryMessageDartConstant.read, widget.chatModel.conversationID);
+    if (widget.localCustomInt == null ||
+        widget.localCustomInt != HistoryMessageDartConstant.read) {
+      globalModel.setLocalCustomInt(widget.msgID,
+          HistoryMessageDartConstant.read, widget.chatModel.conversationID);
     }
     if (isPlaying) {
       SoundPlayer.stop();
@@ -81,8 +83,10 @@ class _TIMUIKitSoundElemState extends TIMUIKitState<TIMUIKitSoundElem> {
 
   downloadMessageDetailAndSave() async {
     if (widget.message.msgID != null && widget.message.msgID != '') {
-      if (widget.message.soundElem!.url == null || widget.message.soundElem!.url == '') {
-        final response = await _messageService.getMessageOnlineUrl(msgID: widget.message.msgID!);
+      if (widget.message.soundElem!.url == null ||
+          widget.message.soundElem!.url == '') {
+        final response = await _messageService.getMessageOnlineUrl(
+            msgID: widget.message.msgID!);
         if (response.data != null) {
           widget.message.soundElem = response.data!.soundElem;
           Future.delayed(const Duration(microseconds: 10), () {
@@ -91,8 +95,13 @@ class _TIMUIKitSoundElemState extends TIMUIKitState<TIMUIKitSoundElem> {
         }
       }
       if (!PlatformUtils().isWeb) {
-        if (widget.message.soundElem!.localUrl == null || widget.message.soundElem!.localUrl == '') {
-          _messageService.downloadMessage(msgID: widget.message.msgID!, messageType: 4, imageType: 0, isSnapshot: false);
+        if (widget.message.soundElem!.localUrl == null ||
+            widget.message.soundElem!.localUrl == '') {
+          _messageService.downloadMessage(
+              msgID: widget.message.msgID!,
+              messageType: 4,
+              imageType: 0,
+              isSnapshot: false);
         }
       }
     }
@@ -102,7 +111,8 @@ class _TIMUIKitSoundElemState extends TIMUIKitState<TIMUIKitSoundElem> {
   void didUpdateWidget(oldWidget) {
     super.didUpdateWidget(oldWidget);
     setState(() {
-      isPlaying = widget.chatModel.currentPlayedMsgId != '' && widget.chatModel.currentPlayedMsgId == widget.msgID;
+      isPlaying = widget.chatModel.currentPlayedMsgId != '' &&
+          widget.chatModel.currentPlayedMsgId == widget.msgID;
     });
   }
 
@@ -110,8 +120,8 @@ class _TIMUIKitSoundElemState extends TIMUIKitState<TIMUIKitSoundElem> {
   void initState() {
     super.initState();
 
-    subscription = SoundPlayer.playStateListener(listener: (AudioPlaybackState state) {
-      if (state == AudioPlaybackState.completed) {
+    subscription = SoundPlayer.playStateListener(listener: (PlayerState state) {
+      if (state.processingState == ProcessingState.completed) {
         widget.chatModel.currentPlayedMsgId = "";
       }
     });
@@ -147,7 +157,8 @@ class _TIMUIKitSoundElemState extends TIMUIKitState<TIMUIKitSoundElem> {
   }
 
   _showJumpColor() {
-    if ((widget.chatModel.jumpMsgID != widget.message.msgID) && (widget.message.msgID?.isNotEmpty ?? true)) {
+    if ((widget.chatModel.jumpMsgID != widget.message.msgID) &&
+        (widget.message.msgID?.isNotEmpty ?? true)) {
       return;
     }
     isShining = true;
@@ -174,18 +185,30 @@ class _TIMUIKitSoundElemState extends TIMUIKitState<TIMUIKitSoundElem> {
   Widget tuiBuild(BuildContext context, TUIKitBuildValue value) {
     final theme = value.theme;
 
-    final backgroundColor = widget.isFromSelf ? (theme.chatMessageItemFromSelfBgColor ?? theme.lightPrimaryMaterialColor.shade50) : (theme.chatMessageItemFromOthersBgColor);
+    final backgroundColor = widget.isFromSelf
+        ? (theme.chatMessageItemFromSelfBgColor ??
+            theme.lightPrimaryMaterialColor.shade50)
+        : (theme.chatMessageItemFromOthersBgColor);
 
     final borderRadius = widget.isFromSelf
-        ? const BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(2), bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10))
-        : const BorderRadius.only(topLeft: Radius.circular(2), topRight: Radius.circular(10), bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10));
+        ? const BorderRadius.only(
+            topLeft: Radius.circular(10),
+            topRight: Radius.circular(2),
+            bottomLeft: Radius.circular(10),
+            bottomRight: Radius.circular(10))
+        : const BorderRadius.only(
+            topLeft: Radius.circular(2),
+            topRight: Radius.circular(10),
+            bottomLeft: Radius.circular(10),
+            bottomRight: Radius.circular(10));
     if (widget.isShowJump) {
       if (!isShining) {
         Future.delayed(Duration.zero, () {
           _showJumpColor();
         });
       } else {
-        if ((widget.chatModel.jumpMsgID == widget.message.msgID) && (widget.message.msgID?.isNotEmpty ?? false)) {
+        if ((widget.chatModel.jumpMsgID == widget.message.msgID) &&
+            (widget.message.msgID?.isNotEmpty ?? false)) {
           widget.clearJump!();
         }
       }
@@ -195,7 +218,9 @@ class _TIMUIKitSoundElemState extends TIMUIKitState<TIMUIKitSoundElem> {
       child: Container(
         padding: widget.textPadding ?? const EdgeInsets.all(10),
         decoration: BoxDecoration(
-          color: isShowJumpState ? const Color.fromRGBO(245, 166, 35, 1) : (widget.backgroundColor ?? backgroundColor),
+          color: isShowJumpState
+              ? const Color.fromRGBO(245, 166, 35, 1)
+              : (widget.backgroundColor ?? backgroundColor),
           borderRadius: widget.borderRadius ?? borderRadius,
         ),
         constraints: const BoxConstraints(maxWidth: 240),

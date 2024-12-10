@@ -31,7 +31,6 @@ dependencies:
   tencent_super_tooltip: ^0.0.1
   video_player: ^2.7.0
   chewie_for_us: ^1.5.0
-  flutter_slidable_for_tencent_im: ^1.4.0
   flutter_plugin_record_plus: ^0.0.16
   azlistview_all_platforms: ^2.1.2
   lpinyin: ^2.0.3
@@ -63,10 +62,8 @@ dependencies:
   open_filex:
   tencent_keyboard_visibility: ^1.0.1
   tim_ui_kit_sticker_plugin: ^3.1.0
-  tencent_im_base: ^3.1.0
   fc_native_video_thumbnail: any
   path: ^1.8.1
-  tencent_cloud_uikit_core: ^1.5.1
   pasteboard: ^0.2.0
   desktop_drop: ^0.4.4
   device_info_plus: any
@@ -74,10 +71,13 @@ dependencies:
   csslib: 0.17.2
   diff_match_patch: ^0.4.1
   just_audio:
-    git: https://github.com/arbyazra123/custom_just_audio.git
+  #   git: https://github.com/arbyazra123/custom_just_audio.git
   markdown: ^7.1.0
   logger: ^2.0.1
   image_clipboard: ^1.0.0+2
+  tencent_im_base:
+  tencent_cloud_uikit_core: 1.7.3
+  flutter_slidable: 
 
 dev_dependencies:
   flutter_lints: ^1.0.0

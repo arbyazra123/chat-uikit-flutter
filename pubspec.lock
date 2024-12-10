@@ -41,6 +41,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.11.0"
+  audio_session:
+    dependency: transitive
+    description:
+      name: audio_session
+      sha256: "343e83bc7809fbda2591a49e525d6b63213ade10c76f15813be9aed6657b3261"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.21"
   azlistview_all_platforms:
     dependency: "direct main"
     description:
@@ -293,10 +301,10 @@ packages:
     dependency: transitive
     description:
       name: dart_internal
-      sha256: "689dccc3d5f62affd339534cca548dce12b3a6b32f0f10861569d3025efc0567"
+      sha256: "781e0d03812e5b52fdc3f71540b178245021be64d22cbc88da2aee6b45705183"
       url: "https://pub.dev"
     source: hosted
-    version: "0.2.9"
+    version: "0.2.13"
   dart_style:
     dependency: transitive
     description:
@@ -526,14 +534,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.0.16"
-  flutter_slidable_for_tencent_im:
+  flutter_slidable:
     dependency: "direct main"
     description:
-      name: flutter_slidable_for_tencent_im
-      sha256: "425faab6304305dd7d38aef448af02acd65f425bf2bd47ce3b70b0b4e714c17b"
+      name: flutter_slidable
+      sha256: "2c5611c0b44e20d180e4342318e1bbc28b0a44ad2c442f5df16962606fd3e8e3"
       url: "https://pub.dev"
     source: hosted
-    version: "1.4.0"
+    version: "3.1.1"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -734,12 +742,27 @@ packages:
   just_audio:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: "66ccdd846d20ea5ada81271cae7361d102228c44"
-      url: "https://github.com/arbyazra123/custom_just_audio.git"
-    source: git
-    version: "0.1.3"
+      name: just_audio
+      sha256: a49e7120b95600bd357f37a2bb04cd1e88252f7cdea8f3368803779b925b1049
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.9.42"
+  just_audio_platform_interface:
+    dependency: transitive
+    description:
+      name: just_audio_platform_interface
+      sha256: "0243828cce503c8366cc2090cefb2b3c871aa8ed2f520670d76fd47aa1ab2790"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.3.0"
+  just_audio_web:
+    dependency: transitive
+    description:
+      name: just_audio_web
+      sha256: "0edb481ad4aa1ff38f8c40f1a3576013c3420bf6669b686fe661627d49bc606c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.11"
   link_preview_generator_for_us:
     dependency: "direct main"
     description:
@@ -808,18 +831,18 @@ packages:
     dependency: transitive
     description:
       name: material_color_utilities
-      sha256: "9528f2f296073ff54cb9fee677df673ace1218163c3bc7628093e7eed5203d41"
+      sha256: "0e0a020085b65b6083975e499759762399b4475f766c21668c4ecca34ea74e5a"
       url: "https://pub.dev"
     source: hosted
-    version: "0.5.0"
+    version: "0.8.0"
   meta:
     dependency: transitive
     description:
       name: meta
-      sha256: a6e590c838b18133bb482a2745ad77c5bb7715fb0451209e1a7567d416678b8e
+      sha256: d584fa6707a52763a52446f02cc621b077888fb63b93bbcb1143a7be5a0c0c04
       url: "https://pub.dev"
     source: hosted
-    version: "1.10.0"
+    version: "1.11.0"
   mime:
     dependency: transitive
     description:
@@ -828,6 +851,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
+  mime_type:
+    dependency: transitive
+    description:
+      name: mime_type
+      sha256: d652b613e84dac1af28030a9fba82c0999be05b98163f9e18a0849c6e63838bb
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.1"
   nested:
     dependency: transitive
     description:
@@ -912,50 +943,50 @@ packages:
     dependency: "direct main"
     description:
       name: path_provider
-      sha256: "3087813781ab814e4157b172f1a11c46be20179fcc9bea043e0fba36bc0acaa2"
+      sha256: fec0d61223fba3154d87759e3cc27fe2c8dc498f6386c6d6fc80d1afdd1bf378
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.15"
+    version: "2.1.4"
   path_provider_android:
     dependency: transitive
     description:
       name: path_provider_android
-      sha256: "2cec049d282c7f13c594b4a73976b0b4f2d7a1838a6dd5aaf7bd9719196bee86"
+      sha256: a248d8146ee5983446bf03ed5ea8f6533129a12b11f12057ad1b4a67a2b3b41d
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.27"
+    version: "2.2.4"
   path_provider_foundation:
     dependency: transitive
     description:
       name: path_provider_foundation
-      sha256: "1995d88ec2948dac43edf8fe58eb434d35d22a2940ecee1a9fefcd62beee6eb3"
+      sha256: "4843174df4d288f5e29185bd6e72a6fbdf5a4a4602717eed565497429f179942"
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.3"
+    version: "2.4.1"
   path_provider_linux:
     dependency: transitive
     description:
       name: path_provider_linux
-      sha256: ffbb8cc9ed2c9ec0e4b7a541e56fd79b138e8f47d2fb86815f15358a349b3b57
+      sha256: f7a1fe3a634fe7734c8d3f2766ad746ae2a2884abe22e241a8b301bf5cac3279
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.11"
+    version: "2.2.1"
   path_provider_platform_interface:
     dependency: transitive
     description:
       name: path_provider_platform_interface
-      sha256: "57585299a729335f1298b43245842678cb9f43a6310351b18fb577d6e33165ec"
+      sha256: "94b1e0dd80970c1ce43d5d4e050a9918fce4f4a775e6142424c30a29a363265c"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.6"
+    version: "2.1.1"
   path_provider_windows:
     dependency: transitive
     description:
       name: path_provider_windows
-      sha256: "1cb68ba4cd3a795033de62ba1b7b4564dace301f952de6bfb3cd91b202b6ee96"
+      sha256: bd6f00dbd873bfb70d0761682da2b3a2c2fccc2b9e84c495821639601d81afe7
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.7"
+    version: "2.3.0"
   permission_handler:
     dependency: "direct main"
     description:
@@ -1269,42 +1300,34 @@ packages:
     dependency: transitive
     description:
       name: tencent_chat_i18n_tool
-      sha256: "0ee982e814bedd0aea4751b972901c6cfcfb224cfeb8e13ae02e43c0b8a58bbc"
+      sha256: "4110251dc9eba8cad7e8b4204ace9379a05fff1d81a2e06c6958c66795e1d334"
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.0"
+    version: "2.3.6"
   tencent_cloud_chat_sdk:
     dependency: transitive
     description:
       name: tencent_cloud_chat_sdk
-      sha256: "39a19d993575ed2e682d85945f88cdb8f6a3cd123989138fea7b905cfd87160b"
+      sha256: "9cbc916e1673cc34cfd63296217cffc9c22ebca571e1d819e83a2e87933b1676"
       url: "https://pub.dev"
     source: hosted
-    version: "6.1.33"
+    version: "8.3.6498"
   tencent_cloud_uikit_core:
     dependency: "direct main"
     description:
       name: tencent_cloud_uikit_core
-      sha256: ddd9447412835ccb2d739363fd1d73bf7f4488b2b76e8217219d25eb90b088f6
+      sha256: "868c6a28373d1d14952d271ba3165e2b4fca5045bbdbf35ae10109b83a30570a"
       url: "https://pub.dev"
     source: hosted
-    version: "1.5.1"
+    version: "1.7.3"
   tencent_im_base:
     dependency: "direct main"
     description:
       name: tencent_im_base
-      sha256: "52a99ef1c9dbd219530cf6f96a9891ab316f789b9b2c11634e0002d0a0f0f63c"
+      sha256: "08790ad86bc780f071975d62aadf1d9b853a7a84d5e2dfb37fceb6977856fbdc"
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.0"
-  tencent_im_sdk_plugin_platform_interface:
-    dependency: transitive
-    description:
-      name: tencent_im_sdk_plugin_platform_interface
-      sha256: e6120d09fbc0dedc0f5a4143809598ae56f2ab56176b4d2646414a59d6b64371
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.16"
+    version: "8.0.0"
   tencent_keyboard_visibility:
     dependency: "direct main"
     description:
@@ -1341,10 +1364,10 @@ packages:
     dependency: "direct main"
     description:
       name: tim_ui_kit_sticker_plugin
-      sha256: "1c4164afbe0bd6479faeee70fad328e82666f8b75c8d54382e97fed250452611"
+      sha256: "723152d3c67636c25b3d14eaca2f81a5e2b75b85603a62ddbe0480db0a9d6488"
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.0"
+    version: "3.2.0"
   timing:
     dependency: transitive
     description:
@@ -1634,5 +1657,5 @@ packages:
     source: hosted
     version: "3.1.2"
 sdks:
-  dart: ">=3.2.0 <3.3.0"
-  flutter: ">=3.16.0"
+  dart: ">=3.3.0 <3.7.0"
+  flutter: ">=3.19.0"

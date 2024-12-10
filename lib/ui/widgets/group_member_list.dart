@@ -2,7 +2,7 @@
 
 import 'package:azlistview_all_platforms/azlistview_all_platforms.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_slidable_for_tencent_im/flutter_slidable.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:lpinyin/lpinyin.dart';
 import 'package:provider/provider.dart';
 import 'package:tencent_cloud_chat_uikit/ui/utils/screen_utils.dart';

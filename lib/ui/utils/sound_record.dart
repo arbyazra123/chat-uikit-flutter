@@ -44,7 +44,7 @@ class SoundPlayer {
     _recorder.dispose();
   }
 
-  static StreamSubscription<AudioPlaybackState> playStateListener({required void Function(AudioPlaybackState)? listener}) => _audioPlayer.playbackStateStream.listen(listener);
+  static StreamSubscription<PlayerState> playStateListener({required void Function(PlayerState)? listener}) => _audioPlayer.playerStateStream.listen(listener);
 
   static setSoundInterruptListener(SoundInterruptListener listener) {
     _soundInterruptListener = listener;

@@ -32,6 +32,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "audio_session",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/audio_session-0.1.21",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "azlistview_all_platforms",
       "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/azlistview_all_platforms-2.1.2",
       "packageUri": "lib/",
@@ -219,7 +225,7 @@
     },
     {
       "name": "dart_internal",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/dart_internal-0.2.9",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/dart_internal-0.2.13",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -398,10 +404,10 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "flutter_slidable_for_tencent_im",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/flutter_slidable_for_tencent_im-1.4.0",
+      "name": "flutter_slidable",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/flutter_slidable-3.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.17"
     },
     {
       "name": "flutter_svg",
@@ -555,9 +561,21 @@
     },
     {
       "name": "just_audio",
-      "rootUri": "file:///Users/def/.pub-cache/git/custom_just_audio-66ccdd846d20ea5ada81271cae7361d102228c44/",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/just_audio-0.9.42",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "just_audio_platform_interface",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/just_audio_platform_interface-4.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "just_audio_web",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/just_audio_web-0.4.11",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
     },
     {
       "name": "link_preview_generator_for_us",
@@ -609,13 +627,13 @@
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/material_color_utilities-0.5.0",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/material_color_utilities-0.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/meta-1.10.0",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/meta-1.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -624,6 +642,12 @@
       "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/mime-1.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "mime_type",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/mime_type-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "nested",
@@ -687,39 +711,39 @@
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/path_provider-2.0.15",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/path_provider-2.1.4",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.2"
     },
     {
       "name": "path_provider_android",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/path_provider_android-2.0.27",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/path_provider_android-2.2.4",
       "packageUri": "lib/",
-      "languageVersion": "2.17"
+      "languageVersion": "3.2"
     },
     {
       "name": "path_provider_foundation",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/path_provider_foundation-2.2.3",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.3"
     },
     {
       "name": "path_provider_linux",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.11",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "2.19"
     },
     {
       "name": "path_provider_platform_interface",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.0.6",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.19"
     },
     {
       "name": "path_provider_windows",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.7",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.2"
     },
     {
       "name": "permission_handler",
@@ -957,33 +981,27 @@
     },
     {
       "name": "tencent_chat_i18n_tool",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/tencent_chat_i18n_tool-2.2.0",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/tencent_chat_i18n_tool-2.3.6",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "tencent_cloud_chat_sdk",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/tencent_cloud_chat_sdk-6.1.33",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/tencent_cloud_chat_sdk-8.3.6498",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "tencent_cloud_uikit_core",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/tencent_cloud_uikit_core-1.5.1",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/tencent_cloud_uikit_core-1.7.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "tencent_im_base",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/tencent_im_base-3.1.0",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/tencent_im_base-8.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
-    },
-    {
-      "name": "tencent_im_sdk_plugin_platform_interface",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/tencent_im_sdk_plugin_platform_interface-1.0.16",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
     },
     {
       "name": "tencent_keyboard_visibility",
@@ -1011,7 +1029,7 @@
     },
     {
       "name": "tim_ui_kit_sticker_plugin",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/tim_ui_kit_sticker_plugin-3.1.0",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/tim_ui_kit_sticker_plugin-3.2.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -1238,7 +1256,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-03-15T10:37:49.638780Z",
+  "generated": "2024-12-10T08:52:07.461938Z",
   "generator": "pub",
-  "generatorVersion": "3.2.2"
+  "generatorVersion": "3.3.4"
 }

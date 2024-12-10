@@ -68,7 +68,7 @@ class TUISearchViewModel extends ChangeNotifier {
   }
 
   void getMsgForConversation(
-      String keyword, String conversationId, int page) async {
+      String keyword, String? conversationId, int page) async {
     void clearData() {
       currentMsgListForConversation = [];
       totalMsgInConversationCount = 0;
