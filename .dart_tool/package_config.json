@@ -267,7 +267,7 @@
     },
     {
       "name": "extended_image",
-      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/extended_image-8.2.0",
+      "rootUri": "file:///Users/def/.pub-cache/hosted/pub.dev/extended_image-8.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -1256,7 +1256,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-12-10T08:52:07.461938Z",
+  "generated": "2024-12-31T04:24:22.935138Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }
