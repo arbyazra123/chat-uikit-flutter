@@ -1094,10 +1094,24 @@ class TUIChatGlobalModel extends ChangeNotifier implements TIMUIKitClass {
     }
   }
 
-  List<V2TimMessage>? getMessageList(String conversationID) {
-    final list = (messageListMap[conversationID]?.reversed.toList() ?? [])
+  List<V2TimMessage>? getMessageList(String conversationID,
+      {bool chatWithBot = false}) {
+    var sorted = messageListMap[conversationID];
+    sorted?.sort((a, b) {
+      if (a.timestamp == b.timestamp) {
+        if (chatWithBot && (a.isSelf ?? false)) {
+          return 1;
+        } else {
+          return -1;
+        }
+      }
+      return b.timestamp!.compareTo(a.timestamp!);
+    });
+    
+    final list = (sorted?.reversed.toList() ?? [])
         .where((element) => _lifeCycle?.messageShouldMount(element) ?? true)
         .toList();
+
     final finalList = _lifeCycle?.messageListShouldMount(list) ?? list;
     final List<V2TimMessage> listWithTimestamp = [];
     final interval = chatConfig.timeDividerConfig?.timeInterval ?? 300;
